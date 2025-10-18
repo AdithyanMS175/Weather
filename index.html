@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .search-box {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .search-box:hover {
+      transform: scale(1.03);
+    }
+
+    .weather-card {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      color: #222;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .weather-card:hover {
+      transform: scale(1.02);
+    }
+
+    .weather-temp {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+
+    .weather-icon {
+      width: 100px;
+      height: 100px;
+    }
+
+    .search-btn {
+      border-radius: 15px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="container">
+      <div class="search-box mb-4 col-md-6 mx-auto d-flex gap-2">
+        <input class="form-control" type="text" id="namee" placeholder="Enter city name...">
+        <button class="btn btn-primary search-btn" onclick="Search()">Search</button>
+      </div>
+
+      <div id="output" class="d-flex justify-content-center"></div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>
